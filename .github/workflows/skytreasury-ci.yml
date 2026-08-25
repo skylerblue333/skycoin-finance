@@ -1,16 +1,16 @@
-name: CI
+name: skytreasury-ci
 
 on:
-  push:
-    branches: [main]
   pull_request:
+    branches: [main]
+  push:
     branches: [main]
 
 permissions:
   contents: read
 
 jobs:
-  test:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

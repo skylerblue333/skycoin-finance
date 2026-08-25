@@ -1,15 +1,16 @@
 {
-  "name": "skycoin4444-module",
-  "version": "1.0.0",
-  "description": "Production-grade SKYCOIN4444 module",
-  "main": "dist/index.js",
+  "name": "skycoin-finance",
+  "version": "1.1.0",
+  "description": "SKYCOIN4444 finance domain libraries and engineering-beta contracts",
+  "main": "dist/treasury.js",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
-    "build": "tsc || echo 'Build completed'",
-    "test": "echo 'Tests passing'",
-    "lint": "echo 'Linting passed'",
-    "start": "node dist/index.js"
+    "build": "node scripts/build.js",
+    "test": "node --test test/*.test.js",
+    "lint": "node --check src/treasury.js && node --check test/treasury.test.js && node --check scripts/build.js",
+    "audit": "npm audit --omit=dev"
   },
-  "keywords": ["skycoin4444", "production"],
+  "keywords": ["skycoin4444", "finance", "treasury"],
   "author": "SKYCOIN4444",
   "license": "MIT"
 }
