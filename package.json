@@ -1,15 +1,19 @@
 {
-  "name": "skycoin4444-module",
-  "version": "1.0.0",
-  "description": "Production-grade SKYCOIN4444 module",
-  "main": "dist/index.js",
+  "name": "@skycoin4444/finance-core",
+  "version": "0.1.0",
+  "description": "Deterministic recurring-revenue and allocation calculations for SKYCOIN4444",
+  "type": "module",
+  "main": "src/finance-core.js",
+  "exports": "./src/finance-core.js",
   "scripts": {
-    "build": "tsc || echo 'Build completed'",
-    "test": "echo 'Tests passing'",
-    "lint": "echo 'Linting passed'",
-    "start": "node dist/index.js"
+    "check": "node --check src/finance-core.js && node --check tests/finance-core.test.js",
+    "test": "node --test tests/finance-core.test.js",
+    "audit": "npm audit --omit=dev --audit-level=high",
+    "pack:check": "npm pack --dry-run"
   },
-  "keywords": ["skycoin4444", "production"],
-  "author": "SKYCOIN4444",
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": ["finance", "recurring-revenue", "allocation"],
   "license": "MIT"
 }
