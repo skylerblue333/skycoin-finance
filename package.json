@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "SKYCOIN4444 finance domain libraries and engineering-beta contracts",
   "main": "dist/treasury.js",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
     "build": "node scripts/build.js",
     "test": "node --test test/*.test.js",
